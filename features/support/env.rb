@@ -6,6 +6,8 @@ require 'pry'
 require 'site_prism'
 
 include Capybara::DSL
+include RSpec::Matchers
+
 
 ENVIRONMENT = (YAML.load_file('./features/config/environment.yml'))
 MASS = (YAML.load_file('./features/fixtures/mass.yml'))
