@@ -12,6 +12,14 @@ Quando(/^clicar em uma subcategoria$/) do
 end
 
 Então(/^devo visualizar os produtos dessa subcategoria$/) do
-  @app.category.validateSubcategoryProducts
+  @app.category.validateProducts
   @app.category.validateLateralMenu
+end
+
+Quando(/^clicar no primeiro produto da página$/) do
+  @app.category.clickFirstProduct
+end
+
+Então(/^eu verei mais informações deste produto$/) do
+  @app.category.validateProductDescription
 end

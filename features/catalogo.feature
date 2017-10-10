@@ -24,13 +24,13 @@ Cenário: Validar página de subcategoria deslogado
   E clicar em uma subcategoria
   Então devo visualizar os produtos dessa subcategoria
 
-# Cenário: Validar página de produto deslogado
-#   Dado que eu esteja na home do site Unilever
-#   Quando acessar o catálogo
-#   E clicar na categoria "Alimentos e Bebidas"
-#   E clicar no primeiro produto da página
-#   Então eu verei mais informações deste produto
-#
+Cenário: Validar página de produto deslogado
+  Dado que eu esteja na home do site Unilever
+  Quando acessar o catálogo
+  E clicar na categoria "Alimentos e Bebidas"
+  E clicar no primeiro produto da página
+  Então eu verei mais informações deste produto
+
 # # Cenário: Refazer pedido a partir da página principal
 #
 # Cenário: Navegar no menu de categorias

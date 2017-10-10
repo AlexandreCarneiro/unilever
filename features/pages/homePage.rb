@@ -4,6 +4,7 @@ class Home < SitePrism::Page
 
     def validateHome
       assert_text('Compra Unilever')
+      wait_for_logoImg
       logoImg.visible?.should be true
       mainContent.visible?.should be true
     end
