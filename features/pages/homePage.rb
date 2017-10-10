@@ -2,8 +2,7 @@ class Home < SitePrism::Page
     element :logoImg, :xpath, '//*[@id="home"]/header/div[2]/div/h1/img'
     element :mainContent, '#main-content'
     element :botaoSair, :xpath, '//*[@class="logout"]'
-    element :botaoLogin, :css, '#home > header > div.top-header.fullWidth > div > div.login-option > a.login'
-
+    element :botaoLogin, :css, '//*[@title="Login/Cadastre-se"]'
     def validateHome
       assert_text('Compra Unilever')
       wait_for_logoImg
