@@ -7,7 +7,7 @@ Então(/^devo visualizar os produtos dessa categoria$/) do
 end
 
 Quando(/^clicar em uma subcategoria$/) do
-  @app.category.categoryFoodAndDrinks.hover
+  @app.category.foodAndDrinksCategory.hover
   click_on "Alimentos"
 end
 
@@ -22,4 +22,12 @@ end
 
 Então(/^eu verei mais informações deste produto$/) do
   @app.category.validateProductDescription
+end
+
+Quando(/^clicar nas categorias$/) do
+  @app.category.navigateOnCategories
+end
+
+Então(/^devo visualizar a página de cada respectiva categoria$/) do
+  @app.category.mainMenu.visible?.should be true
 end
