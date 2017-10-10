@@ -1,3 +1,15 @@
-dados_válidos:
-  user: '27875652000126'
-  password: 'lorena09'
+dados_validos:
+  user: '97149842000141'
+  password: '123456'
+
+dados_invalidos_senha:
+  user: '97149842000141'
+  password: '123333'
+
+dados_invalidos_cnpj:
+  user: '27875652010101'
+  password: '123456'
+
+dados_invalidos_cnpjGerado:
+  user: '29804140000102'
+  password: '123456'
