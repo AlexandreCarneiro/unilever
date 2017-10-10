@@ -6,8 +6,29 @@ Funcionalidade: Login
 	Eu como cliente da Unilever
 	Quero fazer login no site
 	Para acessar minhas informações
-
-Cenário: Fazer login com dados válidos
-	Dado que eu esteja na home do site Unilever
-	Quando eu fazer o login com "dados_válidos"
-	Então estarei na home logada do site
+@positivo
+	Cenário: Fazer login com dados validos
+		Dado que eu esteja na home do site Unilever
+		Quando eu fazer o login com "dados_validos"
+		Então estarei na home logada do site
+@positivo
+	Cenário: Fazer login com dados validos
+		Dado que eu esteja na home do site Unilever
+		Quando eu fazer o login com "dados_validos"
+		E eu fizer o logout
+		Então estarei na home logada do site
+@negativo
+	Cenário: Realizar login sem sucesso digitando senha errada
+		Dado que eu esteja na home do site Unilever
+		Quando eu fazer o login com "dados_invalidos_senha"
+		Então não foi possivel realizar o login
+@negativo
+	Cenário: Realizar login sem sucesso digitando senha errada
+		Dado que eu esteja na home do site Unilever
+		Quando eu fazer o login com "dados_invalidos_cnpj"
+		Então não foi possivel realizar o login
+@negativo	
+	Cenário: Realizar login sem sucesso digitando senha errada
+		Dado que eu esteja na home do site Unilever
+		Quando eu fazer o login com "dados_invalidos_cnpjGerado"
+		Então não foi possivel realizar o login

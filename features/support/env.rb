@@ -1,6 +1,6 @@
 require 'rspec'
 require 'yaml'
-# require 'selenium/webdriver'
+#require 'selenium/webdriver'
 require 'capybara/dsl'
 require 'pry'
 require 'site_prism'
@@ -13,7 +13,7 @@ ENVIRONMENT = (YAML.load_file('./features/config/environment.yml'))
 MASS = (YAML.load_file('./features/fixtures/mass.yml'))
 
 Capybara.register_driver :selenium do |app|
-	Capybara::Selenium::Driver.new(app, :browser => :chrome)
+	Capybara::Selenium::Driver.new(app, :browser => :chrome, :driver_path => "./chromedriver.exe")
 end
 
 
