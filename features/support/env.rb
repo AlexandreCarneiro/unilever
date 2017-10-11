@@ -10,13 +10,13 @@ include Capybara::DSL
 include RSpec::Matchers
 
 if OS.windows?
-    web_driver = "./chromedriver.exe"
+    web_driver = "./resources/chromedriver.exe"
   end
 
 if OS.mac?
    web_driver = "./resources/chromedriver" 
  end
- 
+
 puts OS.windows?&" Windows"
 puts OS.mac?&" Mac"
 ENVIRONMENT = (YAML.load_file('./features/config/environment.yml'))
