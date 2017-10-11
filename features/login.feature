@@ -12,11 +12,11 @@ Funcionalidade: Login
 		Quando eu fazer o login com "dados_validos"
 		Então estarei na home logada do site
 @positivo
-	Cenário: Fazer login com dados validos
+	Cenário: Fazer logout
 		Dado que eu esteja na home do site Unilever
 		Quando eu fazer o login com "dados_validos"
 		E eu fizer o logout
-		Então estarei na home logada do site
+		Então devo visualizar o catálogo da home deslogada
 @negativo
 	Cenário: Realizar login sem sucesso digitando senha errada
 		Dado que eu esteja na home do site Unilever

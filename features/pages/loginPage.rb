@@ -1,3 +1,5 @@
+require 'capybara/dsl'
+
 class Login < SitePrism::Page
     element :registered, :xpath,'//*[@title="Login/Cadastre-se"]'
     element :jaCadastrado, :xpath,'//*[@id="registered"]'
