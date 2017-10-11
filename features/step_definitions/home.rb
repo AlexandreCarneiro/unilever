@@ -12,6 +12,6 @@ end
 
 Quando(/^eu fizer o logout$/) do
 	@app.home.doLogout
-	@app.home.validateLogout
+	#@app.home.validateLogout
 end
 
