@@ -32,7 +32,6 @@ Cenário: Validar página de produto deslogado
   Então eu verei mais informações deste produto
 
 # Cenário: Refazer pedido a partir da página principal
-@cenario
 Cenário: Navegar no menu de categorias
 	Dado que eu esteja na home do site Unilever
 	Quando acessar o catálogo

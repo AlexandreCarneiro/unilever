@@ -16,6 +16,6 @@ Dir.mkdir('reports') unless Dir.exist?('reports')
     page.driver.browser.switch_to.window(last_handle)
   end
 
-  @app.home.doLogoutCleanUP
+  @app.home.logoutCleanUP
   Capybara.reset_sessions!
 end

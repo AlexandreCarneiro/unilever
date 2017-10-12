@@ -1,5 +1,5 @@
-Quando(/^clicar na categoria "([^"]*)"$/) do |string|
-  click_on string
+Quando(/^clicar na categoria "([^"]*)"$/) do |nome_categoria|
+  click_on nome_categoria
 end
 
 Então(/^devo visualizar os produtos dessa categoria$/) do
