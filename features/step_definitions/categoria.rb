@@ -31,3 +31,7 @@ end
 Então(/^devo visualizar a página de cada respectiva categoria$/) do
   @app.categoria.menu_principal.visible?.should be true
 end
+
+Então(/^devo visualizar o menu lateral$/) do
+  @app.categoria.menu_lateral.visible?.should be true
+end

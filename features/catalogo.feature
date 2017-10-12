@@ -37,13 +37,13 @@ Cenário: Navegar no menu de categorias
 	Quando acessar o catálogo
 	E clicar nas categorias
 	Então devo visualizar a página de cada respectiva categoria
+@cenario
+Cenário: Validar menu lateral ao selecionar categorias
+	Dado que eu esteja na home do site Unilever
+	Quando acessar o catálogo
+	E clicar na categoria "Alimentos e Bebidas"
+	Então devo visualizar o menu lateral
 
-# Cenário: Validar menu lateral ao selecionar categorias
-# 	Dado que eu esteja na home do site Unilever
-# 	Quando acessar o catálogo
-# 	E clicar na categoria "Alimentos e Bebidas"
-# 	Então devo visualizar o menu lateral
-#
 # Cenário: Navegar no submenu de categorias
 # 	Dado que eu esteja na home do site Unilever
 #     Quando acessar o catálogo
