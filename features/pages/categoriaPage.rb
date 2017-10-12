@@ -1,54 +1,50 @@
 class Categoria < SitePrism::Page
 
-    # Categories
-    element :foodAndDrinksCategoria, '.nav-item.alimentos-e-bebidas.has-submenu'
-    element :clothesAndHomeCategoria, '.nav-item.cuidados-com-a-roupa-e-casa.has-submenu'
-    element :personalCaresCategoria, '.nav-item.cuidados-pessoais.has-submenu'
-    element :promotionCategoria, '.nav-item.static.promocoes'
-    element :suggestionListCategoria, :xpath, '//*[@id="home-depto"]/nav/div/div/nav/ul/li[5]/a'
-    element :professionalFoodsCategoria, '.nav-item.alimentos-profissionais'
-    element :mainMenu, :xpath, '//*[@id="home-depto"]/nav'
-    # Inside of a Categoria
-    element :nameOfCategoria, '.level-name'
-    element :lateralMenu, '.box-udas.box-marca.box-marca.pos-0'
-    element :listOfProducts, '.shelf-content-itens'
-    # Details of product page
-    element :breadcrumb, '.heading-title.fullWidth'
-    element :productDescription, '.infoProduct'
-    element :productSpecification, '.specs-product'
+    # Categorias
+    element :categoria_alimentos_bebidas, '.nav-item.alimentos-e-bebidas.has-submenu'
+    element :categoria_roupa_casa, '.nav-item.cuidados-com-a-roupa-e-casa.has-submenu'
+    element :categoria_cuidados_pessoais, '.nav-item.cuidados-pessoais.has-submenu'
+    element :categoria_alimentos_profissionais, '.nav-item.alimentos-profissionais'
+
+    element :menu_principal, :xpath, '//*[@id="home-depto"]/nav'
+    # Dentro de uma categoria
+    element :nome_categoria, '.level-name'
+    element :menu_lateral, '.box-udas.box-marca.box-marca.pos-0'
+    element :lista_de_produtos, '.shelf-content-itens'
+    # Detalhes da página de produto
+    element :caminho_paginas, '.heading-title.fullWidth'
+    element :descricao_produto, '.infoProduct'
+    element :especificacao_produto, '.specs-product'
 
 
-    def validateLateralMenu
-        lateralMenu.visible?.should be true
+    def validarMenuLateral
+        menu_lateral.visible?.should be true
     end
 
-    def validateProducts
+    def validarProdutos
         assert_text('Compra Unilever')
-        listOfProducts.visible?.should be true
+        lista_de_produtos.visible?.should be true
     end
 
-    def validateProductDescription
-        productDescription.visible?.should be true
-        productSpecification.visible?.should be true
-        breadcrumb.visible?.should be true
+    def validarDescricaoProdutos
+        caminho_paginas.visible?.should be true
+        descricao_produto.visible?.should be true
+        especificacao_produto.visible?.should be true
+
     end
 
-    def clickFirstProduct
+    def clicarPrimeiroProduto
         find('.shelf-item', match: :first).click
     end
 
-    def navigateOnCategories
-        foodAndDrinksCategoria.click
-        wait_for_nameOfCategoria
-        clothesAndHomeCategoria.click
-        wait_for_nameOfCategoria
-        personalCaresCategoria.click
-        wait_for_nameOfCategoria
-        promotionCategoria.click
-        wait_for_nameOfCategoria
-        suggestionListCategoria.click
-        wait_for_nameOfCategoria
-        professionalFoodsCategoria.click
-        wait_for_nameOfCategoria
+    def navegarCategorias
+        categoria_alimentos_bebidas.click
+        wait_for_nome_categoria
+        categoria_roupa_casa.click
+        wait_for_nome_categoria
+        categoria_cuidados_pessoais.click
+        wait_for_nome_categoria
+        categoria_alimentos_profissionais.click
+        wait_for_nome_categoria
     end
 end
