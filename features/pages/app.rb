@@ -1,6 +1,6 @@
 class App
-  def commom
-    Commom.new
+  def comum
+    Comum.new
   end
   def login
     Login.new
@@ -8,7 +8,7 @@ class App
   def home
     Home.new
   end
-  def category
-    Category.new
+  def categoria
+    Categoria.new
   end
 end

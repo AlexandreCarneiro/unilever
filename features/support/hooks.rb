@@ -16,15 +16,6 @@ Dir.mkdir('reports') unless Dir.exist?('reports')
     page.driver.browser.switch_to.window(last_handle)
   end
 
-  @app.commom.load
   @app.home.doLogoutCleanUP
   Capybara.reset_sessions!
-
 end
-
-Before do |scenario|
-  Capybara.register_driver :selenium do |app|
-     Capybara::Selenium::Driver.new(app, :browser => :chrome, :driver_path => web_driver)
-  end
-end
-
