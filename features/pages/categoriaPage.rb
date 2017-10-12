@@ -7,6 +7,7 @@ class Categoria < SitePrism::Page
     element :categoria_alimentos_profissionais, '.nav-item.alimentos-profissionais'
 
     element :menu_principal, :xpath, '//*[@id="home-depto"]/nav'
+    element :conteudo_principal, '.fullWidth.main'
     # Dentro de uma categoria
     element :nome_categoria, '.level-name'
     element :menu_lateral, '.box-udas.box-marca.box-marca.pos-0'
@@ -40,11 +41,28 @@ class Categoria < SitePrism::Page
     def navegarCategorias
         categoria_alimentos_bebidas.click
         wait_for_nome_categoria
+
         categoria_roupa_casa.click
         wait_for_nome_categoria
+
         categoria_cuidados_pessoais.click
         wait_for_nome_categoria
+
         categoria_alimentos_profissionais.click
+        wait_for_nome_categoria
+    end
+
+    def navegarSubcategorias
+        categoria_alimentos_bebidas.hover
+        click_on "Tempero"
+        wait_for_nome_categoria
+
+        categoria_roupa_casa.hover
+        click_on "Amaciante"
+        wait_for_nome_categoria
+
+        categoria_cuidados_pessoais.hover
+        click_on "Desodorantes"
         wait_for_nome_categoria
     end
 end

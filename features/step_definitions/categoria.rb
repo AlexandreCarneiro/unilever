@@ -35,3 +35,11 @@ end
 Então(/^devo visualizar o menu lateral$/) do
   @app.categoria.menu_lateral.visible?.should be true
 end
+
+Quando(/^clicar nas subcategorias$/) do
+  @app.categoria.navegarSubcategorias
+end
+
+Então(/^devo visualizar a página de cada respectiva subcategoria$/) do
+  @app.categoria.conteudo_principal.visible?.should be true
+end
