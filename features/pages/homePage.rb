@@ -4,31 +4,27 @@ class Home < SitePrism::Page
     element :botaoSair, :xpath, '//*[@class="logout"]'
     element :botaoLogin, :css, '//*[@title="Login/Cadastre-se"]'
 
-    def validateHome
+    def validarHome
       assert_text('Compra Unilever')
       wait_for_logoImg
       logoImg.visible?.should be true
       mainContent.visible?.should be true
     end
 
-    def doLogout
-    	#page.should have_content(botaoSair)
+    def logout
       botaoSair.click
     end
 
-    def validateLogout
-    	botaoLogin.visible?.should be true
-	end
-     def doLogoutCleanUP
-      #page.should have_content(botaoSair)
-      begin  # "try" block
-          botaoSair.click
-      raise 'An error has occured.' # optionally: `raise Exception, "message"`
-        #  puts 'I am after the raise.'  # won't be executed
-      rescue # optionally: `rescue Exception => ex`
-         # puts 'I am rescued.'
-      ensure # will always get executed
-         # puts 'Always gets executed.'
-      end 
+    def validarLogout
+      botaoLogin.visible?.should be true
+    end
+    
+    def logoutCleanUP
+      begin
+       botaoSair.click
+       raise 'An error has occured.' # optionally: `raise Exception, "message"`
+       rescue
+       ensure
+      end
     end
 end
