@@ -31,7 +31,13 @@ Cenário: Validar página de produto deslogado
   E clicar no primeiro produto da página
   Então eu verei mais informações deste produto
 
-# Cenário: Refazer pedido a partir da página principal
+@cenario
+Cenário: Refazer pedido a partir da página principal
+  Dado que eu esteja na home do site Unilever
+  Quando eu fazer o login com "dados_validos"
+  E refazer um pedido
+  Então o devo visualizar o pedido refeito
+
 Cenário: Navegar no menu de categorias
 	Dado que eu esteja na home do site Unilever
 	Quando acessar o catálogo
@@ -43,7 +49,7 @@ Cenário: Validar menu lateral ao selecionar categorias
 	Quando acessar o catálogo
 	E clicar na categoria "Alimentos e Bebidas"
 	Então devo visualizar o menu lateral
-	
+
 Cenário: Navegar no submenu de categorias
 	Dado que eu esteja na home do site Unilever
     Quando acessar o catálogo
