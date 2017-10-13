@@ -1,7 +1,7 @@
 require 'capybara/dsl'
 
 class Login < SitePrism::Page
-    element :registered, :xpath,'//*[@title="Login/Cadastre-se"]'
+    element :lnkLognCadastro, :xpath,'//*[@title="Login/Cadastre-se"]'
     element :jaCadastrado, :xpath,'//*[@id="registered"]'
     element :user, :xpath, '//*[@id="login"]/form/dl[1]/dd/input'
     element :password, :xpath, '//*[@id="login"]/form/dl[2]/dd/input'
@@ -9,13 +9,16 @@ class Login < SitePrism::Page
     element :forgetPassword, :css, '#login > form > p > a'
     element :newAccount, :css, '#login > p > a.link.new-account'
     element :errorPassAcc, :xpath,'//*[@id="login"]/form/dl[2]/dd/span'
-    
-    def acessLoginPopup
-        registered.click
-    end
+    #Objetos do Esqueceu Senha
+    element :lnkEsqueceuSenha, :xpath, "//*[@id='login']/form/p/a"
+    element :txtCnpjEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/input"
+    element :btnSolicitarSenha, :xpath, "//*[@id='forgetpassword']/a"
+    element :txtSucessoEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/span"
 
-    def acesarJaCadastrado
-        jaCadastrado.click
+    def esqueceuSenha(cnpj)
+        lnkEsqueceuSenha.click
+        txtCnpjEsqueceuSenha.set cnpj
+        btnSolicitarSenha.click
     end
 
     def doLogin(cnpj, pass)
