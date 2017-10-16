@@ -16,7 +16,7 @@ class Login < SitePrism::Page
     element :txtSucessoEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/span"
 
     def acessLoginPopup
-        registered.click
+        lnkLognCadastro.click
     end
 
     def acessarJaCadastrado
