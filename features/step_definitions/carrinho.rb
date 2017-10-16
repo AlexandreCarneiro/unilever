@@ -1,6 +1,7 @@
 Quando(/^refazer um pedido$/) do
   @app.carrinho.refazerPedido
-  @app.carrinho.pagamento
+  @app.carrinho.pagamentoCartaoCredito
+  binding.pry
 end
 
 Então(/^o devo visualizar o pedido refeito$/) do
