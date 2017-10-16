@@ -31,7 +31,6 @@ Cenário: Validar página de produto deslogado
   E clicar no primeiro produto da página
   Então eu verei mais informações deste produto
 
-@cenario
 Cenário: Refazer pedido a partir da página principal
   Dado que eu esteja na home do site Unilever
   Quando eu fazer o login com "dados_validos"

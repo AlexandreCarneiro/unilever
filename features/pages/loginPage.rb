@@ -14,7 +14,7 @@ class Login < SitePrism::Page
         registered.click
     end
 
-    def acesarJaCadastrado
+    def acessarJaCadastrado
         jaCadastrado.click
     end
 
