@@ -15,10 +15,12 @@ class Login < SitePrism::Page
     element :btnSolicitarSenha, :xpath, "//*[@id='forgetpassword']/a"
     element :txtSucessoEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/span"
 
-    def esqueceuSenha(cnpj)
-        lnkEsqueceuSenha.click
-        txtCnpjEsqueceuSenha.set cnpj
-        btnSolicitarSenha.click
+    def acessLoginPopup
+        registered.click
+    end
+
+    def acessarJaCadastrado
+        jaCadastrado.click
     end
 
     def doLogin(cnpj, pass)
