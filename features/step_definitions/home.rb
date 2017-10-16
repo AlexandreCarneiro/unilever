@@ -1,5 +1,5 @@
 Quando(/^acessar o catálogo$/) do
- # click_on "Ver catálogo Unilever"
+ click_on "Ver catálogo Unilever"
 end
 
 Então(/^estarei na home logada do site$/) do
@@ -11,5 +11,5 @@ Então(/^devo visualizar o catálogo da home deslogada$/) do
 end
 
 Quando(/^eu fizer o logout$/) do
-	@app.home.logout
+  @app.home.logout
 end
