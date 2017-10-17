@@ -5,6 +5,8 @@ class Busca < SitePrism::Page
     element :txtBarraBuscaPgInvalida, :xpath, '//*[@id="search-terms-not-found"]'
     element :btnCarregarMaisProdutos, :xpath, '//*[@id="category"]/div[2]/div[3]/a'
     element :lstProdutosExibidos, :xpath, '//*[@id="category"]/div[2]/div[2]/ul'
+    element :btnBucarMultiplosProds, :xpath, '//*[@id="home"]/header/div[2]/div/div/div[2]/div[1]'
+    element :lstBuscarMultiplosProds, :xpath, '//*[@id="multipleTextList"]'
 
     def realizarBusca(produto)
         txtBarraDeBusca.set produto
@@ -21,5 +23,13 @@ class Busca < SitePrism::Page
         list = lstProdutosExibidos.all('li')
         quantidadeDepois = list.size
         quantidadeAntes < quantidadeDepois
+    end
+
+    def buscarMultiplosProdutos(quantidadeProdutos)
+        btnBucarMultiplosProds.click
+        for i in 0..quantidadeProdutos
+            produtosBusca = (MASS['nome_produto']['produto '+(i+1).to_s])
+        end
+        lstBuscarMultiplosProds.set produtosBusca
     end
 end

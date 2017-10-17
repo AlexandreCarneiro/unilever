@@ -15,7 +15,18 @@ dados_invalidos_cnpjGerado:
   password: '123456'
 
 nome_produto:
-  produto: 'Omo'
+  produto 1: 'Omo'
+  produto 2: 'Rexona'
+  produto 3: 'CloseUp'
+  produto 4: 'Lux'
+  produto 5: 'Axe'
+  produto 6: 'Hellmanns'
+  produto 7: 'Knorr'
+  produto 8: 'Comfort'
+  produto 9: 'Surf'
+  produto 10: 'TRESemmé'
 
 todos_produtos:
   produto: '*'
+
+

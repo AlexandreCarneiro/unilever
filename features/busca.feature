@@ -19,9 +19,16 @@ Cenário: Realizar Busca Por Todos os Produtos
   Quando eu buscar o produto com nome "todos_produtos"
   Então devo estar na tela de busca valida
 
-@buscaPositiva1
+@buscaPositiva
 Cenário: Validar botão Carregar mais produtos
   Dado que eu esteja na home do site Unilever 
   Quando eu buscar o produto com nome "nome_produto" 
   E validar o botão de carregar mais produtos 
+  Então devo estar na tela de busca valida
+
+@buscaPositiva2
+Cenário: Realizar busca com mais de um produto
+  Dado que eu esteja na home do site Unilever
+  Quando procurar por 5 produtos
   Então devo estar na tela de busca valida 
+
