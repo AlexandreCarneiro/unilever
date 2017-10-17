@@ -11,4 +11,7 @@ class App
   def categoria
     Categoria.new
   end
+  def busca
+    Busca.new
+  end
 end

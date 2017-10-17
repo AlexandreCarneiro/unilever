@@ -5,3 +5,5 @@ Dado(/^que eu esteja na home do site Unilever$/) do
    		@app.login.btnVerCatalogo.click
    end
 end
+
+
