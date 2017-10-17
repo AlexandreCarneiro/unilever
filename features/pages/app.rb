@@ -1,4 +1,5 @@
 class App
+  
   def comum
     Comum.new
   end
@@ -14,4 +15,8 @@ class App
   def busca
     Busca.new
   end
+  def carrinho
+    Carrinho.new
+  end
+  
 end
