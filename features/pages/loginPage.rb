@@ -9,6 +9,7 @@ class Login < SitePrism::Page
     element :forgetPassword, :css, '#login > form > p > a'
     element :newAccount, :css, '#login > p > a.link.new-account'
     element :errorPassAcc, :xpath,'//*[@id="login"]/form/dl[2]/dd/span'
+    element :btnVerCatalogo, :xpath, '//*[@id="welcome"]/a'
     #Objetos do Esqueceu Senha
     element :lnkEsqueceuSenha, :xpath, "//*[@id='login']/form/p/a"
     element :txtCnpjEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/input"
