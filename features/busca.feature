@@ -31,4 +31,3 @@ Cenário: Realizar busca com mais de um produto
   Dado que eu esteja na home do site Unilever
   Quando procurar por 5 produtos
   Então devo estar na tela com multiplas abas de busca 
-
