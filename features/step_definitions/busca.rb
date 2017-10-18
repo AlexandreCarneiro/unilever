@@ -12,6 +12,10 @@ Quando("procurar por {int} produtos") do |int|
 	@app.busca.buscarMultiplosProdutos(int)
 end
 
+Então(/^devo estar na tela com multiplas abas de busca$/) do
+	@app.busca.btnAbaMultiplosProds.visible?.should be true
+end
+
 Então(/^devo estar na tela de busca valida$/) do
 	@app.busca.lblResultadoBusca.visible?.should be true
 end

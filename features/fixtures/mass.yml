@@ -27,6 +27,6 @@ nome_produto:
   produto 10: 'TRESemmé'
 
 todos_produtos:
-  produto: '*'
+  produto 1: '*'
 
 
