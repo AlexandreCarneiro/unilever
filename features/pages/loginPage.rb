@@ -11,10 +11,11 @@ class Login < SitePrism::Page
     element :errorPassAcc, :xpath,'//*[@id="login"]/form/dl[2]/dd/span'
     element :btnVerCatalogo, :xpath, '//*[@id="welcome"]/a'
     #Objetos do Esqueceu Senha
-    element :lnkEsqueceuSenha, :xpath, "//*[@id='login']/form/p/a"
-    element :txtCnpjEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/input"
-    element :btnSolicitarSenha, :xpath, "//*[@id='forgetpassword']/a"
-    element :txtSucessoEsqueceuSenha, :xpath, "//*[@id='forgetpassword']/dl/dd/span"
+    element :lnkEsqueceuSenha, :xpath, '//*[@id="login"]/form/p/a'
+    element :txtCnpjEsqueceuSenha, :xpath, '//*[@id="forgetpassword"]/dl/dd/input'
+    element :btnSolicitarSenha, :xpath, '//*[@id="forgetpassword"]/a'
+    element :txtSucessoEsqueceuSenha, :xpath, '//*[@id="forgetpassword"]/dl/dd/span'
+
 
     def acessLoginPopup
         lnkLognCadastro.click
@@ -33,5 +34,13 @@ class Login < SitePrism::Page
     def validaLoginInvalido()
         puts errorPassAcc.text
         errorPassAcc.text.should be == "Dados incorretos, por favor verifique"
+    end
+
+    def esqueceuSenha(cnpj)
+        App.new.comum.irAteElemento(lnkEsqueceuSenha)
+        lnkEsqueceuSenha.click
+        txtCnpjEsqueceuSenha.set cnpj
+        btnSolicitarSenha.click
+        txtSucessoEsqueceuSenha.text.should have_content("Senha enviada com sucesso")
     end
 end

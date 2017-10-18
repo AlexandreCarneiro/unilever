@@ -1,5 +1,5 @@
 Quando(/^eu fazer o login com "([^"]*)"$/) do |tipo|
-    step 'acessar o catálogo'
+    #step 'acessar o catálogo'
     @app.login.acessLoginPopup
     @app.login.acessarJaCadastrado
     @app.login.doLogin(MASS[tipo]['user'], MASS[tipo]['password'])

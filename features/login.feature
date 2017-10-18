@@ -17,7 +17,7 @@ Funcionalidade: Login
 		Quando eu fazer o login com "dados_validos"
 		E eu fizer o logout
 		Então devo visualizar o catálogo da home deslogada
-@positivo
+@positivo1
 	Cenário: Recuperação de senha
 		Dado que eu esteja na home do site Unilever
 		Quando eu esquecer a senha com o cnpj "dados_validos"
