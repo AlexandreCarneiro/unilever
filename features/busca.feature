@@ -7,26 +7,22 @@ Funcionalidade: Busca
 	Quero buscar produtos
 	Para visualizar mais informações sobre eles
 
-@buscaPositiva
 Cenário: Realizar Busca Por Um Produto Valido
   Dado que eu esteja na home do site Unilever
   Quando eu buscar o produto com nome "nome_produto"
   Então devo estar na tela de busca valida
 
-@buscaPositiva
 Cenário: Realizar Busca Por Todos os Produtos
   Dado que eu esteja na home do site Unilever
   Quando eu buscar o produto com nome "todos_produtos"
   Então devo estar na tela de busca valida
 
-@busca2
 Cenário: Validar botão Carregar mais produtos
   Dado que eu esteja na home do site Unilever 
   Quando eu buscar o produto com nome "nome_produto" 
   E validar o botão de carregar mais produtos 
   Então devo estar na tela de busca valida
 
-@buscaPositiva
 Cenário: Realizar busca com mais de um produto
   Dado que eu esteja na home do site Unilever
   Quando procurar por 5 produtos

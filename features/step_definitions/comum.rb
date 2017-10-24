@@ -7,4 +7,6 @@ Dado(/^que eu esteja na home do site Unilever$/) do
   end
 end
 
-
+Dado('debug') do
+	binding.pry 
+end

@@ -1,17 +1,17 @@
 dados_validos:
-  user: '97149842000141'
+  cnpj: '97149842000141'
   password: '123456'
 
 dados_invalidos_senha:
-  user: '97149842000141'
+  cnpj: '97149842000141'
   password: '123333'
 
 dados_invalidos_cnpj:
-  user: '27875652010101'
+  cnpj: '27875652010101'
   password: '123456'
 
 dados_invalidos_cnpjGerado:
-  user: '29804140000102'
+  cnpj: '29804140000102'
   password: '123456'
 
 nome_produto:
@@ -29,4 +29,38 @@ nome_produto:
 todos_produtos:
   produto 1: '*'
 
+novo_cadastro:
+  isento: true
+  cnpj: '02116742000102'
+  inscricaoEstadual: '12345678910'
+  nomeFantasia: 'Ifc Teste'
+  seuNome: 'IFC Teste'
+  email: 'ifcTeste@mailinator.com'
+  senha: '123456'
+  repitaSenha: '123456'
+  telefone: '1159887766'
+  celular: '11967584930'
 
+novo_cadastro_invalido:
+  isento: true
+  cnpj: '02116733330102'
+  inscricaoEstadual: '12345678910'
+  nomeFantasia: 'Ifc Teste'
+  seuNome: 'IFC Teste'
+  email: 'ifcTeste'
+  senha: '123'
+  repitaSenha: '654321'
+  telefone: '8877'
+  celular: '445566'
+
+novo_cadastro_vazio:
+  isento: true
+  cnpj: ''
+  inscricaoEstadual: ''
+  nomeFantasia: ''
+  seuNome: ''
+  email: ''
+  senha: ''
+  repitaSenha: ''
+  telefone: ''
+  celular: ''

@@ -1,16 +1,17 @@
 class Busca < SitePrism::Page
-    element :txtBarraDeBusca, :xpath, '//*[@id="small-searchterms"]'
+    element :txtBarraDeBusca, :xpath, '//*[@id="small-searchterms"]' #mover para homePage.rb
     element :lblResultadoBusca, :xpath, '//*[@id="category"]/div[1]/div/h1/div/span[2]'
     element :lblBuscaInvalida, :xpath, '//*[@id="category"]/div[2]/div[2]/div'
     element :txtBarraBuscaPgInvalida, :xpath, '//*[@id="search-terms-not-found"]'
     element :btnCarregarMaisProdutos, :xpath, '//*[@id="category"]/div[3]/div[3]/a'
     element :lstProdutosExibidos, :xpath, '//*[@id="category"]/div[3]/div[2]'
-    element :btnAbrirListaMultiplosProds, :xpath, '//*[@id="home"]/header/div[2]/div/div/div[2]/div[1]'
-    element :lstBuscarMultiplosProds, :xpath, '//*[@id="multipleTextList"]'
-    element :btnBuscarMultiplosProds, :xpath, '//*[@id="multipleSubmit"]'
-    element :btnAbaMultiplosProds, :xpath, '//*[@id="ifcSearchTabs"]/div/div[1]/div/div[2]/div/button'
+    element :btnAbrirListaMultiplosProds, :xpath, '//*[@id="home"]/header/div[2]/div/div/div[2]/div[1]' #mover para homePage.rb
+    element :lstBuscarMultiplosProds, :xpath, '//*[@id="multipleTextList"]' #mover para homePage.rb
+    element :btnBuscarMultiplosProds, :xpath, '//*[@id="multipleSubmit"]' #mover para homePage.rb
+    element :btnAbaMultiplosProds, :xpath, '//*[@id="ifcSearchTabs"]/div/div[1]/div/div[1]/div/button' #mover para homePage.rb
 
-    def realizarBusca(produto)
+    
+    def realizarBusca(produto) #mover para homePage.rb
         txtBarraDeBusca.set produto
         txtBarraDeBusca.native.send_keys(:return)
     end
@@ -23,7 +24,7 @@ class Busca < SitePrism::Page
         lstProdutosExibidos.all('li').size.should be >= quantidadeAntes
     end
 
-    def buscarMultiplosProdutos(quantidadeProdutos)
+    def buscarMultiplosProdutos(quantidadeProdutos)  #mover para homePage.rb
         btnAbrirListaMultiplosProds.click
         produtosBusca = (MASS['nome_produto']['produto '+(1).to_s])
         for i in 2..quantidadeProdutos
@@ -32,4 +33,5 @@ class Busca < SitePrism::Page
         lstBuscarMultiplosProds.set produtosBusca
         btnBuscarMultiplosProds.click
     end
+
 end

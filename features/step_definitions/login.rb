@@ -2,13 +2,13 @@ Quando(/^eu fazer o login com "([^"]*)"$/) do |tipo|
     #step 'acessar o catálogo'
     @app.login.acessLoginPopup
     @app.login.acessarJaCadastrado
-    @app.login.doLogin(MASS[tipo]['user'], MASS[tipo]['password'])
+    @app.login.doLogin(MASS[tipo]['cnpj'], MASS[tipo]['password'])
 end
 
 Quando(/^eu esquecer a senha com o cnpj "([^"]*)"$/) do |tipo|
 	@app.login.lnkLognCadastro.click    
 	@app.login.jaCadastrado.click
-    @app.login.esqueceuSenha(MASS[tipo]['user'])
+    @app.login.esqueceuSenha(MASS[tipo]['cnpj'])
 end
 
 Entao (/^devo visualizar a mensagem de senha enviada com sucesso$/) do
