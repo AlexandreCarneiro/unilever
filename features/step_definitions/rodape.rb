@@ -49,7 +49,6 @@ Quando(/^acessar Dicas para seu negócio no Rodapé$/) do
  @app.home.lnkRodapeDicasParaNegocio.click
 end
 
-
 Então(/^estarei na pagina institucional "([^"]*)"$/) do  |pagina|
 	@app.rodape.validaSobreCompra(pagina)
 end

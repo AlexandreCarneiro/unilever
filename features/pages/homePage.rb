@@ -17,10 +17,6 @@ class Home < SitePrism::Page
     element :lnkRodapePlanogramas, :css, 'footer > div.centerAll > ul > li.nav.sale-more > ul:nth-child(2) > li:nth-child(1) > a'
     element :lnkRodapeDicasParaNegocio, :css, 'footer > div.centerAll > ul > li.nav.sale-more > ul:nth-child(2) > li:nth-child(2) > a'
 
-
-
-
-
     def validarHome
       assert_text('Compra Unilever')
       wait_for_logoImg

@@ -68,3 +68,14 @@ Funcionalidade: Login
 		Quando acessar Trocas e Devoluções no Rodapé
 		Então estarei na pagina institucional "Trocas e Devoluções"
 
+@positivo1
+	Cenário: Acessar a pagina de Servico de Atendimento
+		Dado que eu esteja na home do site Unilever
+		Quando acessar Planogramas para prateleiras no Rodapé
+		Então estarei na pagina institucional "Planogramas"
+
+@positivo1
+	Cenário: Acessar a pagina de Servico de Atendimento
+		Dado que eu esteja na home do site Unilever
+		Quando acessar Dicas para seu negócio no Rodapé
+		Então estarei na pagina institucional "Artigos"
