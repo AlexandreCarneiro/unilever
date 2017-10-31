@@ -5,9 +5,11 @@ Dir.mkdir('reports') unless Dir.exist?('reports')
 
   sufix = ('error' if scenario.failed?) || 'success'
   name = scenario.name.tr(' ', '_').downcase
-
-  page.save_screenshot("reports/#{sufix}-#{name}.png")
-  embed("reports/#{sufix}-#{name}.png", 'image/png', 'SCREENSHOT')
+  d = DateTime.now
+  datetime = d.strftime("%d-%m-%Y_%H-%M")
+  namePath = "reports/#{sufix}-#{name}-#{datetime}.png"
+  page.save_screenshot(namePath)
+  embed(namePath, 'image/png', 'SCREENSHOT')
 
   if page.driver.browser.window_handles.count > 1
     puts page.driver.browser.window_handles.count

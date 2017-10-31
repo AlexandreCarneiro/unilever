@@ -3,7 +3,7 @@ class Busca < SitePrism::Page
     element :lblResultadoBusca, :xpath, '//*[@id="category"]/div[1]/div/h1/div/span[2]'
     element :lblBuscaInvalida, :xpath, '//*[@id="category"]/div[2]/div[2]/div'
     element :txtBarraBuscaPgInvalida, :xpath, '//*[@id="search-terms-not-found"]'
-    element :btnCarregarMaisProdutos, :xpath, '//*[@id="category"]/div[3]/div[3]/a'
+    element :btnCarregarMaisProdutos, :css, '#category > div.shelf > div.shelf-footer > a'
     element :lstProdutosExibidos, :xpath, '//*[@id="category"]/div[3]/div[2]'
     element :btnAbrirListaMultiplosProds, :xpath, '//*[@id="home"]/header/div[2]/div/div/div[2]/div[1]' #mover para homePage.rb
     element :lstBuscarMultiplosProds, :xpath, '//*[@id="multipleTextList"]' #mover para homePage.rb

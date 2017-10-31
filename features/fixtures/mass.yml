@@ -31,7 +31,7 @@ todos_produtos:
 
 novo_cadastro:
   isento: true
-  cnpj: '02116742000102'
+  cnpj: '03012230000169'
   inscricaoEstadual: '12345678910'
   nomeFantasia: 'Ifc Teste'
   seuNome: 'IFC Teste'

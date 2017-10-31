@@ -16,7 +16,7 @@ Cenário: Realizar Busca Por Todos os Produtos
   Dado que eu esteja na home do site Unilever
   Quando eu buscar o produto com nome "todos_produtos"
   Então devo estar na tela de busca valida
-
+@busca123
 Cenário: Validar botão Carregar mais produtos
   Dado que eu esteja na home do site Unilever 
   Quando eu buscar o produto com nome "nome_produto" 

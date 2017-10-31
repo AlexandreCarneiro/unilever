@@ -18,5 +18,7 @@ class App
   def carrinho
     Carrinho.new
   end
-  
+  def rodape
+    Rodape.new
+  end
 end

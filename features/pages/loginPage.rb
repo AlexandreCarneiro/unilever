@@ -60,8 +60,9 @@ class Login < SitePrism::Page
     end
 
     def esqueceuSenha(cnpj)
-        @@app.comum.irAteElemento(lnkEsqueceuSenha)
+        #@@app.comum.irAteElemento(lnkEsqueceuSenha)
         lnkEsqueceuSenha.click
+        sleep(1)
         txtCnpjEsqueceuSenha.set cnpj
         btnSolicitarSenha.click
         txtSucessoEsqueceuSenha.text.should have_content("Senha enviada com sucesso")

@@ -20,6 +20,7 @@ end
 
 
 Quando (/^eu clicar em novo cadastro$/) do
+	@app.comum.irAteElemento(@app.login.btnConfirmarNovoCadastro)
 	@app.login.btnConfirmarNovoCadastro.click
 end
 
