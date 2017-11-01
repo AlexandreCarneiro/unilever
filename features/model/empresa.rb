@@ -1,10 +1,22 @@
 class Empresa
     #Classe para OOP de empresas e seus atributos
-    attr_accessor :cnpj, :senha, :isento, :inscricaoEstadual, :nomeFantasia, :seuNome, :email, :senha, :repitaSenha, :telefone, :celular
+    attr_accessor :cnpj, :senha, :isento, :inscricaoEstadual, :nomeFantasia, :seuNome, :email, :emailDois, :senha, :repitaSenha, :telefone, :celular
 
     def self.new_empresa()
-        empresaCadastro = allocate
-        empresaCadastro
+        empresa = allocate
+        empresa.cnpj= (MASS['novo_cadastro']['cnpj'])
+        empresa.senha= (MASS['novo_cadastro']['senha'])
+        empresa.isento= (MASS['novo_cadastro']['isento'])
+        empresa.inscricaoEstadual= (MASS['novo_cadastro']['inscricaoEstadual'])
+        empresa.nomeFantasia= (MASS['novo_cadastro']['nomeFantasia'])
+        empresa.seuNome= (MASS['novo_cadastro']['seuNome'])
+        empresa.email= (MASS['novo_cadastro']['email'])
+        empresa.email= (MASS['novo_cadastro']['emailDois'])
+        empresa.senha= (MASS['novo_cadastro']['senha'])
+        empresa.repitaSenha= (MASS['novo_cadastro']['repitaSenha'])
+        empresa.telefone= (MASS['novo_cadastro']['telefone'])      
+        empresa.celular= (MASS['novo_cadastro']['celular'])
+        empresa
     end
 
     def self.nova_empresa(tipoMassa)
@@ -39,6 +51,8 @@ class Empresa
             @seuNome= (MASS[massaDois]['seuNome'])
             when "E-MAIL"
             @email= (MASS[massaDois]['email'])
+            when "E-MAIL2DOIS"
+            @email= (MASS[massaDois]['emailDois'])
             when "SENHA"
             @senha= (MASS[massaDois]['senha'])
             when "REPITA SENHA"

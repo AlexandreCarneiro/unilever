@@ -21,4 +21,10 @@ class App
   def rodape
     Rodape.new
   end
+   def meuCadastro
+    MeuCadastro.new
+  end
+   def sserv
+    Sserv.new
+  end
 end

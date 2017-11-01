@@ -3,6 +3,7 @@ class Home < SitePrism::Page
     element :mainContent, '#main-content'
     element :botaoSair, :xpath, '//*[@class="logout"]'
     element :botaoLogin, :xpath, '//*[@title="Login/Cadastre-se"]'
+    element :btnUsuario, :css, 'header > div.top-header.fullWidth > div > div.login-option > div'
     #objetos de rodape
     element :lnkRodapeQuemSomos, :css, 'footer > div.centerAll > ul > li.nav.about > ul > li:nth-child(1) > a'
     element :lnkRodapeNossosParceiros, :css, 'footer > div.centerAll > ul > li.nav.about > ul > li:nth-child(2) > a'
@@ -31,7 +32,7 @@ class Home < SitePrism::Page
     def validarLogout
       botaoLogin.visible?.should be true
     end
-    
+
     def logoutCleanUP
       begin
        botaoSair.click

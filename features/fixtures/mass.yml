@@ -31,11 +31,12 @@ todos_produtos:
 
 novo_cadastro:
   isento: true
-  cnpj: '03012230000169'
+  cnpj: '17997547000106'
   inscricaoEstadual: '12345678910'
   nomeFantasia: 'Ifc Teste'
   seuNome: 'IFC Teste'
   email: 'ifcTeste@mailinator.com'
+  emailDois: 'ifcTeste1234@mailinator.com'
   senha: '123456'
   repitaSenha: '123456'
   telefone: '1159887766'
@@ -48,6 +49,7 @@ novo_cadastro_invalido:
   nomeFantasia: 'Ifc Teste'
   seuNome: 'IFC Teste'
   email: 'ifcTeste'
+  emailDois: 'ifcTeste1234'
   senha: '123'
   repitaSenha: '654321'
   telefone: '8877'
@@ -60,6 +62,7 @@ novo_cadastro_vazio:
   nomeFantasia: ''
   seuNome: ''
   email: ''
+  emailDois: ''
   senha: ''
   repitaSenha: ''
   telefone: ''

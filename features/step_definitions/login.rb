@@ -11,8 +11,8 @@ Quando(/^eu esquecer a senha com o cnpj "([^"]*)"$/) do |tipo|
     @app.login.esqueceuSenha(MASS[tipo]['cnpj'])
 end
 
-Entao (/^devo visualizar a mensagem de senha enviada com sucesso$/) do
-	@app.login.txtSucessoEsqueceuSenha.text.include? "Senha enviada com sucesso"
+Então (/^devo visualizar a mensagem de senha enviada com sucesso$/) do
+	@app.login.txtSucessoEsqueceuSenha.text.upcase.should include(("Senha enviada com sucesso").upcase)
 end
 
 Então(/^não foi possivel realizar o login$/) do

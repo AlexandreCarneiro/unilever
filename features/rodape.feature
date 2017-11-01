@@ -38,43 +38,43 @@ Funcionalidade: Login
 		Quando acessar Serviço de Atendimento no Rodapé
 		Então estarei na pagina institucional "Serviço de Atendimento"
 
-@positivo2
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Como Comprar no Rodapé
 		Então o pop up do video estará aberto
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Primeiro Acesso no Rodapé
 		Então estarei na pagina institucional "Primeiro Acesso"
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Após a Conclusão do Pedido no Rodapé
 		Então estarei na pagina institucional "Após a Conclusão do Pedido"
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Garantia de Produto no Rodapé
 		Então estarei na pagina institucional "Garantia de Produto"
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Trocas e Devoluções no Rodapé
 		Então estarei na pagina institucional "Trocas e Devoluções"
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Planogramas para prateleiras no Rodapé
 		Então estarei na pagina institucional "Planogramas"
 
-@positivo1
+@positivo
 	Cenário: Acessar a pagina de Servico de Atendimento
 		Dado que eu esteja na home do site Unilever
 		Quando acessar Dicas para seu negócio no Rodapé
