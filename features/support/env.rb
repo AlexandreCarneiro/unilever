@@ -17,7 +17,7 @@ end
 
 Capybara.configure do |config|
 	Capybara.current_driver= :selenium
- 	config.default_max_wait_time = 3
+ 	config.default_max_wait_time = 6
  	# window = Capybara.current_session.driver.browser.manage.window
  	# window.resize_to(1280, 840)
  	Capybara.page.driver.browser.manage.window.maximize

@@ -28,12 +28,16 @@ Funcionalidade: Login
 		Quando eu fazer o login com "dados_invalidos_senha"
 		Então não foi possivel realizar o login
 @negativo
-	Cenário: Realizar login sem sucesso digitando senha errada
+	Cenário: Realizar login sem sucesso digitando CNPJ invalido
 		Dado que eu esteja na home do site Unilever
 		Quando eu fazer o login com "dados_invalidos_cnpj"
 		Então não foi possivel realizar o login
 @negativo	
-	Cenário: Realizar login sem sucesso digitando senha errada
+	Cenário: Realizar login sem sucesso digitando CNPJ gerado por gerador
 		Dado que eu esteja na home do site Unilever
 		Quando eu fazer o login com "dados_invalidos_cnpjGerado"
 		Então não foi possivel realizar o login
+# @debug
+# 	Cenário: debug
+# 	Dado que eu esteja na home do site Unilever
+# 	E debug
